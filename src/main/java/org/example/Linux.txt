@@ -1,0 +1,174 @@
+viktoria@viktoria-VirtualBox:~$ cat > pets.txt
+cats
+dogs
+hamsters
+viktoria@viktoria-VirtualBox:~$ cat > livestock.txt
+horses
+camels
+donkeys
+viktoria@viktoria-VirtualBox:~$ cat pets.txt livestock.txt > mans_friends.txt
+viktoria@viktoria-VirtualBox:~$ nano mans_friends.txt
+viktoria@viktoria-VirtualBox:~$ mkdir mans_friends_dir
+viktoria@viktoria-VirtualBox:~$ mv mans_friends.txt mans_friends_dir/
+viktoria@viktoria-VirtualBox:~$ cd mans_friends_dir/
+viktoria@viktoria-VirtualBox:~/mans_friends_dir$ ll
+итого 12
+drwxrwxr-x  2 viktoria viktoria 4096 июн 18 11:00 ./
+drwxr-x--- 21 viktoria viktoria 4096 июн 18 11:00 ../
+-rw-rw-r--  1 viktoria viktoria   41 июн 18 10:57 mans_friends.txt
+viktoria@viktoria-VirtualBox:~/mans_friends_dir$ cd
+viktoria@viktoria-VirtualBox:~$ sudo apt-get install software-properties-common
+[sudo] пароль для viktoria:
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово
+Уже установлен пакет software-properties-common самой новой версии (0.99.22.9).
+Следующий пакет устанавливался автоматически и больше не требуется:
+  ubuntu-fan
+Для его удаления используйте «sudo apt autoremove».
+Обновлено 0 пакетов, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 59 пакетов не обновлено.
+viktoria@viktoria-VirtualBox:~$ sudo add-apt-repository 'deb http://repo.mysql.com/apt/ubuntu/ bionic mysql-8.0'
+Репозиторий: 'deb http://repo.mysql.com/apt/ubuntu/ bionic mysql-8.0'
+Описание:
+Archive for codename: bionic components: mysql-8.0
+Дополнительные сведения: http://repo.mysql.com/apt/ubuntu/
+Добавление репозитория.
+Нажмите [ENTER] для продолжения или Ctrl-C для отмены.
+Adding deb entry to /etc/apt/sources.list.d/archive_uri-http_repo_mysql_com_apt_ubuntu_-jammy.list
+Adding disabled deb-src entry to /etc/apt/sources.list.d/archive_uri-http_repo_mysql_com_apt_ubuntu_-jammy.list
+Пол:1 http://repo.mysql.com/apt/ubuntu bionic InRelease [20,0 kB]
+Ошб:1 http://repo.mysql.com/apt/ubuntu bionic InRelease
+  Следующие подписи не могут быть проверены, так как недоступен открытый ключ: NO_PUBKEY B7B3B788A8D3785C
+Пол:2 https://download.docker.com/linux/ubuntu jammy InRelease [48,8 kB]
+Сущ:3 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+Пол:4 https://download.virtualbox.org/virtualbox/debian jammy InRelease [4 428 B]
+Пол:5 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Пол:6 https://download.docker.com/linux/ubuntu jammy/stable amd64 Packages [33,7 kB]
+Пол:7 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Пол:8 https://download.virtualbox.org/virtualbox/debian jammy/contrib amd64 Packages [1 485 B]
+Пол:9 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Пол:10 http://security.ubuntu.com/ubuntu jammy-security/main i386 Packages [485 kB]
+Пол:11 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main i386 Packages [642 kB]
+Пол:12 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1 730 kB]
+Пол:13 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1 522 kB]
+Пол:14 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [318 kB]
+Пол:15 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 DEP-11 Metadata [103 kB]
+Пол:16 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main DEP-11 48x48 Icons [37,5 kB]
+Пол:17 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main DEP-11 64x64 Icons [56,8 kB]
+Пол:18 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [1 990 kB]
+Пол:19 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [338 kB]
+Пол:20 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 DEP-11 Metadata [212 B]
+Пол:21 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted DEP-11 48x48 Icons [29 B]
+Пол:22 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted DEP-11 64x64 Icons [29 B]
+Пол:23 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted DEP-11 64x64@2 Icons [29 B]
+Пол:24 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1 086 kB]
+Пол:25 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe i386 Packages [706 kB]
+Пол:26 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [261 kB]
+Пол:27 http://security.ubuntu.com/ubuntu jammy-security/main amd64 DEP-11 Metadata [43,2 kB]
+Пол:28 http://security.ubuntu.com/ubuntu jammy-security/main DEP-11 48x48 Icons [16,9 kB]
+Пол:29 http://security.ubuntu.com/ubuntu jammy-security/main DEP-11 64x64 Icons [26,5 kB]
+Пол:30 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [1 933 kB]
+Пол:31 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [251 kB]
+Пол:32 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 DEP-11 Metadata [341 kB]
+Пол:33 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe DEP-11 48x48 Icons [227 kB]
+Пол:34 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe DEP-11 64x64 Icons [364 kB]
+Пол:35 http://ru.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [43,0 kB]
+Пол:36 http://ru.archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [10,7 kB]
+Пол:37 http://ru.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 DEP-11 Metadata [940 B]
+Пол:38 http://ru.archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [67,1 kB]
+Пол:39 http://ru.archive.ubuntu.com/ubuntu jammy-backports/main i386 Packages [59,3 kB]
+Пол:40 http://ru.archive.ubuntu.com/ubuntu jammy-backports/main amd64 DEP-11 Metadata [6 772 B]
+Пол:41 http://ru.archive.ubuntu.com/ubuntu jammy-backports/main DEP-11 48x48 Icons [16,1 kB]
+Пол:42 http://ru.archive.ubuntu.com/ubuntu jammy-backports/main DEP-11 64x64 Icons [21,3 kB]
+Пол:43 http://ru.archive.ubuntu.com/ubuntu jammy-backports/restricted amd64 DEP-11 Metadata [212 B]
+Пол:44 http://ru.archive.ubuntu.com/ubuntu jammy-backports/restricted DEP-11 48x48 Icons [29 B]
+Пол:45 http://ru.archive.ubuntu.com/ubuntu jammy-backports/restricted DEP-11 64x64 Icons [29 B]
+Пол:46 http://ru.archive.ubuntu.com/ubuntu jammy-backports/restricted DEP-11 64x64@2 Icons [29 B]
+Пол:47 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe i386 Packages [16,0 kB]
+Пол:48 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [27,2 kB]
+Пол:49 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [16,3 kB]
+Пол:50 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 DEP-11 Metadata [21,1 kB]
+Пол:51 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe DEP-11 48x48 Icons [15,7 kB]
+Пол:52 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe DEP-11 64x64 Icons [25,6 kB]
+Пол:53 http://ru.archive.ubuntu.com/ubuntu jammy-backports/multiverse amd64 DEP-11 Metadata [212 B]
+Пол:54 http://ru.archive.ubuntu.com/ubuntu jammy-backports/multiverse DEP-11 48x48 Icons [29 B]
+Пол:55 http://ru.archive.ubuntu.com/ubuntu jammy-backports/multiverse DEP-11 64x64 Icons [29 B]
+Пол:56 http://ru.archive.ubuntu.com/ubuntu jammy-backports/multiverse DEP-11 64x64@2 Icons [29 B]
+Пол:57 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [329 kB]
+Пол:58 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 DEP-11 Metadata [208 B]
+Пол:59 http://security.ubuntu.com/ubuntu jammy-security/restricted DEP-11 48x48 Icons [29 B]
+Пол:60 http://security.ubuntu.com/ubuntu jammy-security/restricted DEP-11 64x64 Icons [29 B]
+Пол:61 http://security.ubuntu.com/ubuntu jammy-security/restricted DEP-11 64x64@2 Icons [29 B]
+Пол:62 http://security.ubuntu.com/ubuntu jammy-security/universe i386 Packages [608 kB]
+Пол:63 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [859 kB]
+Пол:64 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [166 kB]
+Пол:65 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 DEP-11 Metadata [89,2 kB]
+Пол:66 http://security.ubuntu.com/ubuntu jammy-security/universe DEP-11 48x48 Icons [41,0 kB]
+Пол:67 http://security.ubuntu.com/ubuntu jammy-security/universe DEP-11 64x64 Icons [62,8 kB]
+Пол:68 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 DEP-11 Metadata [208 B]
+Пол:69 http://security.ubuntu.com/ubuntu jammy-security/multiverse DEP-11 48x48 Icons [29 B]
+Пол:70 http://security.ubuntu.com/ubuntu jammy-security/multiverse DEP-11 64x64 Icons [29 B]
+Пол:71 http://security.ubuntu.com/ubuntu jammy-security/multiverse DEP-11 64x64@2 Icons [29 B]
+Чтение списков пакетов… Готово
+W: Ошибка GPG: http://repo.mysql.com/apt/ubuntu bionic InRelease: Следующие подписи не могут быть проверены, так как недоступен открытый ключ: NO_PUBKEY B7B3B788A8D3785C
+E: Репозиторий «http://repo.mysql.com/apt/ubuntu bionic InRelease» не подписан.
+N: Обновление из этого репозитория нельзя выполнить безопасным способом, поэтому по умолчанию он отключён.
+N: Информацию о создании репозитория и настройках пользователя смотрите в справочной странице apt-secure(8).
+N: Пропускается получение настроенного файла «stable/binary-i386/Packages», так как репозиторий «https://download.docker.com/linux/ubuntu jammy InRelease» не поддерживает архитектуру «i386»
+viktoria@viktoria-VirtualBox:~$ sudo apt update
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+Сущ:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Сущ:3 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Пол:4 http://repo.mysql.com/apt/ubuntu bionic InRelease [20,0 kB]
+Сущ:5 https://download.docker.com/linux/ubuntu jammy InRelease
+Сущ:6 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Ошб:4 http://repo.mysql.com/apt/ubuntu bionic InRelease
+  Следующие подписи не могут быть проверены, так как недоступен открытый ключ: NO_PUBKEY B7B3B788A8D3785C
+Сущ:7 https://download.virtualbox.org/virtualbox/debian jammy InRelease
+Чтение списков пакетов… Готово
+W: Ошибка GPG: http://repo.mysql.com/apt/ubuntu bionic InRelease: Следующие подписи не могут быть проверены, так как недоступен открытый ключ: NO_PUBKEY B7B3B788A8D3785C
+E: Репозиторий «http://repo.mysql.com/apt/ubuntu bionic InRelease» не подписан.
+N: Обновление из этого репозитория нельзя выполнить безопасным способом, поэтому по умолчанию он отключён.
+N: Информацию о создании репозитория и настройках пользователя смотрите в справочной странице apt-secure(8).
+N: Пропускается получение настроенного файла «stable/binary-i386/Packages», так как репозиторий «https://download.docker.com/linux/ubuntu jammy InRelease» не поддерживает архитектуру «i386»
+viktoria@viktoria-VirtualBox:~$ sudo apt install mysql-server
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово
+Следующий пакет устанавливался автоматически и больше не требуется:
+  ubuntu-fan
+Для его удаления используйте «sudo apt autoremove».
+Следующие НОВЫЕ пакеты будут установлены:
+  mysql-server
+Обновлено 0 пакетов, установлено 1 новых пакетов, для удаления отмечено 0 пакетов, и 159 пакетов не обновлено.
+Необходимо скачать 9 462 B архивов.
+После данной операции объём занятого дискового пространства возрастёт на 35,8 kB.
+Пол:1 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-server all 8.0.37-0ubuntu0.22.04.3 [9 462 B]
+Получено 9 462 B за 1с (18,3 kB/s)
+Выбор ранее не выбранного пакета mysql-server.
+(Чтение базы данных … на данный момент установлен 193901 файл и каталог.)
+Подготовка к распаковке …/mysql-server_8.0.37-0ubuntu0.22.04.3_all.deb …
+Распаковывается mysql-server (8.0.37-0ubuntu0.22.04.3) …
+Настраивается пакет mysql-server (8.0.37-0ubuntu0.22.04.3) …
+viktoria@viktoria-VirtualBox:~$ wget http://ftp.ubuntu.com/ubuntu/pool/universe/c/cowsay/cowsay_3.03+dfsg2-4_all.deb
+--2024-06-18 11:35:32--  http://ftp.ubuntu.com/ubuntu/pool/universe/c/cowsay/cowsay_3.03+dfsg2-4_all.deb
+Распознаётся ftp.ubuntu.com (ftp.ubuntu.com)… 185.125.190.81, 185.125.190.83, 185.125.190.82, ...
+Подключение к ftp.ubuntu.com (ftp.ubuntu.com)|185.125.190.81|:80... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа… 200 OK
+Длина: 17684 (17K) [application/vnd.debian.binary-package]
+Сохранение в: ‘cowsay_3.03+dfsg2-4_all.deb’
+
+cowsay_3.03+dfsg2-4_all.deb   100%[=================================================>]  17,27K  --.-KB/s    за 0s
+
+2024-06-18 11:35:32 (131 MB/s) - ‘cowsay_3.03+dfsg2-4_all.deb’ сохранён [17684/17684]
+viktoria@viktoria-VirtualBox:~$ sudo dpkg -i cowsay_3.03+dfsg2-4_all.deb
+Выбор ранее не выбранного пакета cowsay.
+(Чтение базы данных … на данный момент установлено 193903 файла и каталога.)
+Подготовка к распаковке cowsay_3.03+dfsg2-4_all.deb …
+Распаковывается cowsay (3.03+dfsg2-4) …
+Настраивается пакет cowsay (3.03+dfsg2-4) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+viktoria@viktoria-VirtualBox:~$ sudo dpkg -r cowsay
+(Чтение базы данных … на данный момент установлен 193961 файл и каталог.)
+Удаляется cowsay (3.03+dfsg2-4) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
